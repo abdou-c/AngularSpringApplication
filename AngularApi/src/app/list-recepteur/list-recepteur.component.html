@@ -1,0 +1,30 @@
+<a class="btn btn-primary" routerLink="/addemetteur">Faire un transfert</a>
+<h1>Liste des Recepteurs:</h1>
+<div class="container">
+    <table class="table table-trapped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>Téléphone</th>
+                <th>Cni</th>
+                <th>Action</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let recepteur of recepteurs">
+                <td>{{recepteur.id}}</td>
+                <td>{{recepteur.nom}}</td>
+                <td>{{recepteur.prenom}}</td>
+                <td>{{recepteur.telephone}}</td>
+                <td>{{recepteur.cni}}</td>
+                <td><button class="btn btn-success">Modifier</button></td>
+                <td><button class="btn btn-danger">Supprimer</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+

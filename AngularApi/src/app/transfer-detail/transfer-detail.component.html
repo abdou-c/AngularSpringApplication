@@ -1,0 +1,27 @@
+<a class="btn btn-primary" routerLink="/addemetteur">Faire un transfert</a>
+<h1>Liste des Envoies:</h1>
+<div class="container">
+  <table class="table table-trapped">
+    <thead>
+    <tr>
+      <th>Id</th>
+      <th>Montant</th>
+      <th>Date d'envoie</th>
+      <th>Action</th>
+      <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let detail of details">
+        <td>{{detail.id}}</td>
+        <td>{{detail.montant}}</td>
+        <td>{{detail.dateEnvoie}}</td>
+        <td><button class="btn btn-success">Modifier</button></td>
+        <td><button class="btn btn-danger">Supprimer</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+

@@ -1,0 +1,97 @@
+<div class="card mt-50 mb-50">
+    <div class="card-title mx-auto"> Zididi Cash Transfert </div>
+    <div class="nav">
+        <ul class="mx-auto">
+            <li><a routerLink="/emetteurs">Liste des Emetteurs</a></li>
+            <li><a routerLink="/recepteurs">Liste des Recepteurs</a></li>
+          <li><a routerLink="/details">Liste des Envoies</a></li>
+            <li class="active"><a routerLink="/addemetteur">Transactions</a></li>
+        </ul>
+    </div>
+
+    <form (ngSubmit)="saveEmetteur()">
+        <span id="card-header">Emetteur:</span>
+        <div class="row row-1">
+            <div class="row row-2"> <span id="card-inner">Nom</span> </div>
+            <div class="col-2"></div>
+            <div class="col-7"> <input type="text" placeholder="Nom Emetteur" name="nom" [(ngModel)]="emetteur.nom"/> </div>
+            <div class="col-3 d-flex justify-content-center"> <a href="#"></a> </div>
+        </div>
+        <div class="row row-1">
+            <div class="row row-2"> <span id="card-inner">Prenom</span> </div>
+            <div class="col-2"></div>
+            <div class="col-7"> <input type="text"
+                                    name="prenom"
+                                        placeholder="Prenom Emetteur"
+                                            [(ngModel)]="emetteur.prenom" />
+            </div>
+            <div class="col-3 d-flex justify-content-center"> <a href="#"></a> </div>
+        </div>
+
+        <div class="row row-1">
+            <div class="row row-2"> <span id="card-inner">Telephone</span> </div>
+            <div class="col-2"></div>
+            <div class="col-7"> <input type="number" name="telephone" placeholder="Telephone Emetteur" [(ngModel)]="emetteur.telephone"/> </div>
+            <div class="col-3 d-flex justify-content-center"> <a href="#"></a> </div>
+        </div>
+
+        <div class="row row-1">
+            <div class="row row-2"> <span id="card-inner">C.d'identité</span> </div>
+            <div class="col-2"></div>
+            <div class="col-7"> <input type="number" name="cni" placeholder="Cni Emetteur" [(ngModel)]="emetteur.cni"/> </div>
+            <div class="col-3 d-flex justify-content-center"> <a href="#"></a></div>
+        </div>
+
+        <span id="card-header">Recepteur:</span>
+        <div class="row row-1">
+            <div class="row row-2"> <span id="card-inner">Nom</span> </div>
+            <div class="col-2"></div>
+            <div class="col-7"> <input type="text" placeholder="Nom Recepteur" name="nom" [(ngModel)]="recepteur.nom"/> </div>
+            <div class="col-3 d-flex justify-content-center"> <a href="#"></a> </div>
+        </div>
+        <div class="row row-1">
+            <div class="row row-2"> <span id="card-inner">Prenom</span> </div>
+            <div class="col-2"></div>
+            <div class="col-7"> <input type="text"
+                                    name="prenom"
+                                        placeholder="Prenom Recepteur"
+                                            [(ngModel)]="recepteur.prenom" />
+            </div>
+            <div class="col-3 d-flex justify-content-center"> <a href="#"></a> </div>
+        </div>
+
+        <div class="row row-1">
+            <div class="row row-2"> <span id="card-inner">Telephone</span> </div>
+            <div class="col-2"></div>
+            <div class="col-7"> <input type="number" name="telephone" placeholder="Telephone Recepteur" [(ngModel)]="recepteur.telephone"/> </div>
+            <div class="col-3 d-flex justify-content-center"> <a href="#"></a> </div>
+        </div>
+
+        <div class="row row-1">
+            <div class="row row-2"> <span id="card-inner">C.d'identité</span> </div>
+            <div class="col-2"></div>
+            <div class="col-7"> <input type="number" name="cni" placeholder="Cni Recepteur" [(ngModel)]="recepteur.cni"/> </div>
+            <div class="col-3 d-flex justify-content-center"> <a href="#"></a> </div>
+        </div>
+
+        <span id="card-header">Envoie:</span>
+        <div class="row row-1">
+            <div class="row row-2"> <span id="card-inner">Montant</span> </div>
+            <div class="col-2"></div>
+            <div class="col-7"> <input type="text" placeholder="Montant" name="montant"  [(ngModel)]="detail.montant"/> </div>
+            <div class="col-3 d-flex justify-content-center"> <a href="#"></a> </div>
+        </div>
+        <div class="row row-1">
+            <div class="row row-2"> <span id="card-inner">Date Envoie</span> </div>
+            <div class="col-2"></div>
+            <div class="col-7"> <input type="date"
+                                    name="dte"
+                                        placeholder="Date Envoie"
+                                       [(ngModel)]="detail.dateEnvoie"/>
+            </div>
+            <div class="col-3 d-flex justify-content-center"> <a href="#"></a> </div>
+        </div>
+        <button class="btn btn-primary">Valider le transfert</button>
+    </form>
+   </div>
+
